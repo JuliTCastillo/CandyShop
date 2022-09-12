@@ -1,11 +1,11 @@
 import './App.css';
 import Navbar from './components/Navbar.js';
-import CartWidget from './components/CartWidget.js';
+import ItemListConteiner from './components/ItemListConteiner';
 function App() {
   return (
     <>
       <Navbar/>
-      <CartWidget/>
+      <ItemListConteiner/>
     </>
   );
 }

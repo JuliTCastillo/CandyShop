@@ -1,4 +1,5 @@
-import carrito from '../imagen/carro.png';
+import CartWidget from './CartWidget.js';
+
 const Navbar = () => {
     return (
         <>
@@ -16,9 +17,7 @@ const Navbar = () => {
                             <a class="nav-link text-light" href="#">Otros</a>
                         </li>
                         <li>
-                            <a class="nav-link text-light" href="#">
-                                <img  src={carrito} alt="carrito" width="35"/>
-                            </a>
+                            <CartWidget/>
                         </li>
                     </ul>
                 </nav>

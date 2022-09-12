@@ -1,9 +1,10 @@
-const CartWidget = () => {
+import carrito from '../imagen/carro.png';
+const CartWidget = () =>{
     return(
         <>
-            <div class="cardProduct m-3">
-                <p>AQUI IRAN LOS PRODUCTOS</p>
-            </div>
+            <a class="nav-link text-light" href="#">
+                <img  src={carrito} alt="carrito" width="35"/>
+            </a>
         </>
     )
 }
