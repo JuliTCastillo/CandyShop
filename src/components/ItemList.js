@@ -23,7 +23,7 @@ const ItemList = () => {
             producto.map(items => (
                 <div className="col-3">
                     <div className="bg-white rounded shadow-sm py-5 px-4">
-                        <Item name={items.name} imagen = {items.img} des={items.des} stock = {items.stock}/>
+                        <Item key={items.id} name={items.name} imagen = {items.img} des={items.des} stock = {items.stock}/>
                     </div>
                 </div>
             ))
