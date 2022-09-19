@@ -7,8 +7,175 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: rgb(230, 230, 230);
 }
-
+h1{
+  font-size: 30px;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.grilla{
+  grid-template-columns: 1fr 1fr 1fr;
+}
+header{
+
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.404);
+
+}
+
+.container{
+
+  width: 1280px;
+  margin: auto;
+
+}
+
+.nav_checkbox{
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 10px 0px;
+
+}
+
+.logo{
+
+  text-decoration: none;
+  color: white;
+  padding-left: 10px;
+
+}
+
+.tab-nav{
+
+  outline: none;
+  display: none;
+
+}
+
+.label{
+
+  display: none;
+  color: white;
+
+}
+
+.burger{
+
+  width: 35px;
+  height: 5px;
+  background-color: white;
+  margin-top: 5px;
+
+}
+
+.content_nav{
+
+  grid-column: 3;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+}
+
+.content_nav li{
+
+  display: inline-block;
+  padding-right: 10px;
+
+}
+
+.content_nav li a{
+
+  text-decoration: none;
+  color: white;
+  position: relative;
+
+}
+
+.content_nav li a::after{
+
+  content: '';
+  display: block;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  left: 0;
+  right: 0;
+  transform-origin: right;
+  transform: scale(0, 1);
+  transition: transform ease-in-out 0.5s;
+
+}
+
+.content_nav li a:hover::after{
+  transform: scale(1, 1);
+}
+
+.contador{
+  justify-content: start;
+}
+.agregar{
+  justify-content: end;
+}
+
+@media screen and (max-width: 1000px) {
+  .grilla{
+    grid-template-columns: 1fr 1fr;
+  }
+  .itemDetail{
+    flex-direction: column;
+  }
+  .imgProduct{
+    width: 200px;
+  }
+  .contador, .agregar{
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 500px) {
+  .grilla{
+    grid-template-columns: 1fr;
+  }
+  .contador{
+    margin: 0;
+  }
+  .agregar button{
+    width: 150px;
+  }
+}
+@media screen and (max-width: 1280px){
+  .container{
+      width: 100%;
+  }
+}
+
+@media screen and (max-width: 770px){
+  .label{
+      display: grid;
+      cursor: pointer;
+      grid-column: 3;
+      padding-right: 10px;
+  }
+  .content_nav{
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-column: 1/4;
+      text-align: center;
+      max-height: 0;
+      overflow: hidden;
+      transition: all ease-in-out 0.6s;
+  }
+  .nav_checkbox input:checked ~ .content_nav{
+      max-height: 500px;
+  }
+  .content_nav li{
+      padding: 15px 0px;
+  }
+
+
+}
+

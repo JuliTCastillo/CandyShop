@@ -17,13 +17,13 @@ const ItemCount = ({initial, stock}) => {
     }
     return(
         <>
-            <div className="d-flex justify-content-start aling-items-center m-3">
+            <div className="d-flex aling-items-center m-3 contador">
                 <button className="w-25 border-light" onClick={disminuir}>-</button>
                 <input type="text" value={cant} className="w-25 text-center"></input>
                 <button className="w-25 border-light" onClick={incrementar}>+</button>
             </div>
-            <div className="d-flex justify-content-end aling-items-center">
-                <button className="btn btn-success w-25" type="submit" id="btnActivar">Añadir</button>
+            <div className="d-flex aling-items-center agregar">
+                <button className="btn btn-success" type="submit" id="btnActivar">Añadir</button>
             </div>
         </>
     )
