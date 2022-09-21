@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const ItemCount = ({initial, stock}) => {
+const ItemCount = ({initial, stock, onAdd}) => {
     const [cant, setCant] = useState(parseInt(initial)); //estado - hook
     const disminuir = () =>{ 
         if(cant > 0){ //Validamos que el producto no sea menor a 0
@@ -15,6 +15,7 @@ const ItemCount = ({initial, stock}) => {
             alert("Lo siento, ese es todo el stock del producto");
         }
     }
+
     return(
         <>
             <div className="d-flex aling-items-center m-3 contador">
@@ -23,7 +24,7 @@ const ItemCount = ({initial, stock}) => {
                 <button className="w-25 border-light" onClick={incrementar}>+</button>
             </div>
             <div className="d-flex aling-items-center agregar">
-                <button className="btn btn-success" type="submit" id="btnActivar">Añadir</button>
+                <button className="btn btn-success" type="submit" onClick={() => onAdd(cant)}>Añadir</button>
             </div>
         </>
     )

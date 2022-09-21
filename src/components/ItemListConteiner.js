@@ -26,10 +26,6 @@ const ItemListConteiner = () => {
         setDato(dato);
     },[id]);
 
-    const onAdd = (aux) =>{ //Crear el componente contador
-        alert("you have selected " + aux + " items.");
-    }
-
     return(
         <>
             <div className="container items">

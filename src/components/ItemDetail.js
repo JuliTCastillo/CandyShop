@@ -1,6 +1,15 @@
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import ItemCount from "./ItemCount";
 
 const ItemDetail = ({datos}) => {
+    const [itemCount, setItemCount] = useState(0);
+
+    const onAdd = (qty) =>{ //Crear el componente contador
+        alert("you have selected " + qty + " items.");
+        setItemCount(qty);
+    }
+
     return(
         <>
             <div className="bg-white rounded shadow-sm py-5 px-4 m-5">
@@ -15,9 +24,12 @@ const ItemDetail = ({datos}) => {
                         <br/>
                         <p>Precio del Producto : ${datos.precio}</p>
                         <div className="mt-md-5">
-                            <ItemCount initial="0" stock = {datos.stock}/>
+                            {
+                                itemCount == 0
+                                ? <ItemCount initial="0" stock = {datos.stock} onAdd={onAdd}/>
+                                : <Link to="/cart"><button className="btn btn-danger">Checkout</button></Link>
+                            }
                         </div>
-                        
                     </div>
                 </div>
             </div>
