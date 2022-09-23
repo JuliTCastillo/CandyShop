@@ -1,13 +1,18 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-import ItemCount from "./ItemCount";
+import ItemCount from "./ItemCount.js";
+import {CartContext} from "./CartContext.js";
+
 
 const ItemDetail = ({datos}) => {
     const [itemCount, setItemCount] = useState(0);
+    //le pedimos que nos traiga la función ¿
+    const { addItem } = useContext(CartContext);
 
     const onAdd = (qty) =>{ //Crear el componente contador
         alert("you have selected " + qty + " items.");
         setItemCount(qty);
+        addItem(datos);
     }
 
     return(
