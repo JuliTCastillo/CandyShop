@@ -18,16 +18,14 @@ const CartContextProvider = ({children}) => {
         setCartList([]);
     }
     const removeItem = (indice) =>{
-        let newCartList =  cartList;
-        newCartList.splice(indice, 1)
-        setCartList(newCartList);
+        setCartList(cartList.filter(product => product.id != indice));
     }
 
     const isInCart = (id) =>{
         cartList.forEach((item, i) => {
             if(item.id == parseInt(id)){
                 console.log("el elemento esta en el indice " + i);
-                removeItem(i);
+                removeItem(item.id);
             }
         })
     } 

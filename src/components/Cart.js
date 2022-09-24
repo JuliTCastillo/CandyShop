@@ -16,8 +16,7 @@ const Cart = () =>{
                 <button className="bg-black btn text-light" onClick={clear}>Borrar todo</button>
             </div>
             {
-                cartList.length > 0 
-                ? cartList.map(item => 
+                cartList.map(item => 
                     <div className="bg-white rounded shadow-sm py-3 px-4 m-5">
                         <div className="d-flex">
                             <img src={item.img} alt={item.des} width="150"/>
@@ -29,7 +28,6 @@ const Cart = () =>{
                         </div>
                     </div>
                 )
-                : <p>cargando...</p>
             }
         </>
     )
