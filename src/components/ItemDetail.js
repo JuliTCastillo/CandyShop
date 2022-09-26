@@ -12,8 +12,14 @@ const ItemDetail = ({datos}) => {
     const onAdd = (qty) =>{ //Crear el componente contador
         alert("you have selected " + qty + " items.");
         setItemCount(qty);
-        addItem(datos);
+        addItem(datos, qty);
     }
+    if(!datos) return(
+        <div className="d-flex justify-content-center align-items-center flex-column m-5">
+            <h2>ERROR, 404 NOT FOUND</h2>
+            <p>Try later.</p>
+        </div>
+    )
 
     return(
         <>

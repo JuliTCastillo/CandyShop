@@ -7,7 +7,8 @@ const product = [
         stock : "5",
         category: 1,
         detail : "Producto Arcor. Tableta chocolate con leche Cofler 140gr.",
-        precio : 215
+        precio : 215,
+        count : 0
     },
     {
         id: "2",
@@ -17,7 +18,8 @@ const product = [
         stock : "8",
         category: 2,
         detail : "Torpedo la marca preferida por los chicos, que siempre trae propuestas refrescantes y divertidas. Disfrutalo en sus clásicas versiones Torpedo Frutilla y Torpedo Limón y también en las versiones más divertidas Torpedo Pinta Lengua y el nuevo Torpedo acido!",
-        precio : 215
+        precio : 215,
+        count : 0
     },
     {
         id: "3",
@@ -27,7 +29,8 @@ const product = [
         stock : "3",
         category: 3,
         detail : "Botella Bonaqua 500ml. 'Tomá Bonaqua. Una buena idea'.",
-        precio : 215
+        precio : 215,
+        count : 0
     },
     {
         id: "4 ",
@@ -37,7 +40,8 @@ const product = [
         stock : "3",
         category: 3,
         detail : "Agua Saborizada Villa Del Sur Levite Manzana Sin Gas 500 Ml. Disfrutalo en sus otras variedad como Pomelo, naranja, pera y anana",
-        precio : 215
+        precio : 215,
+        count : 0
     },
     {
         id: "5 ",
@@ -47,7 +51,8 @@ const product = [
         stock : "3",
         category: 3,
         detail : "Fanta 500ml sabor naranja. Burbujas de sabor dulce siempre dulce, no importa si escogiste naranja, uva, fresa, guaraná o, quizás piña, todos vendrán a burbujas que corren por tu lengua, paladar y garganta, deliciosas para que termines el trago diciendo ahhhh. ​ Porque a veces la vida se torna gris, Fanta con sus sabores estarán ahí para volver el color a mil. ​",
-        precio : 215
+        precio : 215,
+        count : 0
     },
     {
         id: "6 ",
@@ -57,7 +62,8 @@ const product = [
         stock : "3",
         category: 3,
         detail : "Gaseosa Coca-Cola Sabor Original 500 Ml Nada supera el sabor de una Coca-Cola. Diseñado para acompañar cada momento, el sabor de la Coca-Cola es unclásico que perdura desde hace más de 130 años. Deliciosa y refrescante",
-        precio : 215
+        precio : 215,
+        count : 0
     },
     {
         id: "7",
@@ -67,7 +73,8 @@ const product = [
         stock : "5",
         category: 1,
         detail : "Es un delicioso chocolate de 4 barritas de oblea crocante, cubierto de chocolate con leche. Una porción equivale a 2 barritas y contiene sólo 120 calorías. El más delicioso chocolate para llevar a todos lados. ¡Abrí el pack, separá una de las 4 barritas, partila en dos y disfrutá! #mibreak #CuálEsTuBreak? Have a Break, Have a KitKat®",
-        precio : 215
+        precio : 215,
+        count : 0
     },
     {
         id: "8",
@@ -77,7 +84,8 @@ const product = [
         stock : "5",
         category: 1,
         detail : "Viene en pequeñas porciones con mucho sabor, y además está hecho sin colorantes ni conservantes. Por eso es perfecto para cuando decís si! KINDER® CHOCOLATE pequeños momentos, que significan mucho.",
-        precio : 215
+        precio : 215,
+        count : 0
     },
     {
         id: "9",
@@ -87,7 +95,8 @@ const product = [
         stock : "5",
         category: 2,
         detail : "Helado Frigor Popsy, sabor frutilla y naranja. También disfruta el Popsy Espacial de Frutilla y crema",
-        precio : 215 
+        precio : 215,
+        count : 0 
     },
     {
         id: "10",
@@ -97,7 +106,8 @@ const product = [
         stock : "5",
         category: 2,
         detail : "Un exquisito helado de crema americana con cobertura de chocolate que hacen del producto una experiencia unica en su version palito cilíndrico de Frigor",
-        precio : 215
+        precio : 215,
+        count : 0
     },
     {
         id: "11",
@@ -107,7 +117,8 @@ const product = [
         stock : "5",
         category: 2,
         detail : "SIN PARAR. Disfrutá el sabor del histórico helado de FRIGOR con las más ricas salsas y chips de chocolates, en una medida para golosos. Encontralo en sus diferentes versiones: Frutilla y Americana, Dulce de Leche y Americana, Chocolate y Dulce de Leche.",
-        precio : 215
+        precio : 215,
+        count : 0
     },
     {
         id: "12",
@@ -117,7 +128,8 @@ const product = [
         stock : "5",
         category: 3,
         detail : "Sprite 500ml sabor limalimon. Burbujeante, refrescante y de sabor ligero, Sprite es un refresco con sabor a lima y limón. Llegó por primera vez a las tiendas en 1961 y hoy se vende en más de 190 países.",
-        precio : 215
+        precio : 215,
+        count : 0
     }
 ];
 

@@ -7,12 +7,23 @@ export const CartContext = createContext();
 const CartContextProvider = ({children}) => {
     const [cartList, setCartList] = useState([]);
 
-    const addItem = (product) => {
+    const addItem = (product, count) => {
         // cartList.push(product); ===> No se puede hacer de esta forma
-        setCartList([
-            //Los datos de antes - añadimos el product nuevo
-            ...cartList, product
-        ])
+        //Si el producto existe en la lista del carrito
+        if(isInCart(product.id)){
+            setCartList(cartList.map(ele =>{
+                return ele.id === product.id ? {...ele, count: ele .count + count} : ele
+            }));
+        }
+        else{
+            product.count = count;
+            //si no se encuentra en nuestra lista, añadimos el producto 
+            setCartList([
+                //Los datos de antes - añadimos el product nuevo
+                ...cartList, product
+            ])
+        }
+        
     }
     const clear = () =>{
         setCartList([]);
@@ -22,17 +33,16 @@ const CartContextProvider = ({children}) => {
     }
 
     const isInCart = (id) =>{
-        cartList.forEach((item, i) => {
-            if(item.id == parseInt(id)){
-                console.log("el elemento esta en el indice " + i);
-                removeItem(item.id);
-            }
-        })
+        return cartList.some(element => element.id == id);
     } 
+
+    const totalProduct= () => {
+        return cartList.reduce((val, newVal) => val + newVal.count, 0);
+    }
     return(
         // Usamos nuestro componente y le pasamos los datos
         //Un componente no puede renderizar dos elemento, por eso usamos un fragment
-        <CartContext.Provider value = {{cartList, addItem, clear, isInCart}}>
+        <CartContext.Provider value = {{cartList, addItem, clear, removeItem, totalProduct}}>
             {children}
         </CartContext.Provider>
     )

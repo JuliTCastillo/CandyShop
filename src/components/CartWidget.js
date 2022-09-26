@@ -1,10 +1,21 @@
+import { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import carrito from '../imagen/carro.png';
+import { CartContext } from "./CartContext";
+
 const CartWidget = () =>{
+
+    const {totalProduct} = useContext(CartContext);
+
     return(
         <>
-            <a className="nav-link text-light" href="#">
-                <img  src={carrito} alt="carrito" width="35"/>
-            </a>
+            <Link to="/cart">
+                <img  src={carrito} alt="carrito" width="40"/>
+                {
+                    (totalProduct() != 0) 
+                    && <span className='cartwidget'>{totalProduct()}</span>
+                }
+            </Link>
         </>
     )
 }

@@ -13,3 +13,11 @@ header{
   text-align: center;
   border-radius: 100%;
 }
+.cartwidget{
+  position: absolute;
+  top: 20px;
+  left: 35px;
+  background-color: #99d88c;
+  border-radius: 100%;
+  padding: 0px 8px;
+}

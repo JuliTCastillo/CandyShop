@@ -1,15 +1,12 @@
 import { useContext } from "react";
 import { CartContext } from "./CartContext";
+import {ItemCount} from "./ItemCount";
 
 const Cart = () =>{
     //Hacemos una constante - utilizamos un hook - indicamos que contexto queremos usar
     //Ahora mi CartContext es un objeto - le indico que elemento quiero(lista)
-    const {cartList, clear, isInCart} = useContext(CartContext); // * Hook 
+    const {cartList, clear, removeItem} = useContext(CartContext); // * Hook 
 
-    const obtenerId = (id) =>{
-        console.log(id);
-        isInCart(id);
-    }
     return(
         <>
             <div className="d-flex justify-content-end align-items-center m-3">
@@ -18,12 +15,19 @@ const Cart = () =>{
             {
                 cartList.map(item => 
                     <div className="bg-white rounded shadow-sm py-3 px-4 m-5">
-                        <div className="d-flex">
-                            <img src={item.img} alt={item.des} width="150"/>
+                        <div className="d-flex justify-content-around align-items-center">
                             <div>
-                                <h4>Producto : {item.name}</h4> 
-                                <p>Precio : ${item.precio}</p>                           
-                                <button className="btn btn-danger" onClick={() => obtenerId(item.id)}>Eliminar de la lista</button>
+                                <h4>{item.name}</h4> 
+                                <img src={item.img} alt={item.des} width="150"/>
+                            </div>
+                            <div className="w-50">
+                                <h4>Detalle</h4>
+                                <p>Precio : ${item.precio}</p>
+                                <div className="d-flex justify-content-between align-items-center">
+                                <p>Cantidad : {item.count}</p> 
+                                <p>Total : ${item.count * item.precio}</p>
+                                </div>
+                                <button className="btn btn-danger" onClick={() => removeItem(item.id)}>Eliminar de la lista</button>
                             </div>
                         </div>
                     </div>
