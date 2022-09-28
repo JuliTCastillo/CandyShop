@@ -39,10 +39,14 @@ const CartContextProvider = ({children}) => {
     const totalProduct= () => {
         return cartList.reduce((val, newVal) => val + newVal.count, 0);
     }
+
+    const totalPrice = () =>{
+        return cartList.reduce((val, itemCart) => val + (itemCart.precio * itemCart.count), 0);
+    }
     return(
         // Usamos nuestro componente y le pasamos los datos
         //Un componente no puede renderizar dos elemento, por eso usamos un fragment
-        <CartContext.Provider value = {{cartList, addItem, clear, removeItem, totalProduct}}>
+        <CartContext.Provider value = {{cartList, addItem, clear, removeItem, totalProduct, totalPrice}}>
             {children}
         </CartContext.Provider>
     )

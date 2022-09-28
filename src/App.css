@@ -21,3 +21,23 @@ header{
   border-radius: 100%;
   padding: 0px 8px;
 }
+.cartProduct{
+  border : #5c9e4e solid 3px;
+}
+.cartGrilla{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.price{
+  height: 320px;
+}
+footer{
+  background-color: #5c9e4e;
+}
+
+footer p { 
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+}

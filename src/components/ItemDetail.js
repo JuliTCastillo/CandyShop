@@ -10,7 +10,6 @@ const ItemDetail = ({datos}) => {
     const { addItem } = useContext(CartContext);
 
     const onAdd = (qty) =>{ //Crear el componente contador
-        alert("you have selected " + qty + " items.");
         setItemCount(qty);
         addItem(datos, qty);
     }

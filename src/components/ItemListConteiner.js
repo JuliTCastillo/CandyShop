@@ -4,6 +4,7 @@ import products from '../utils/Product.js';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Loader from './loader.js';
+import Banner from './Banner';
 
 const ItemListConteiner = () => {
     //Si no hacemos un estado de nuestro array. Nos tira error
@@ -37,11 +38,14 @@ const ItemListConteiner = () => {
             {loading 
             ? <Loader/> 
             : 
+            <>
+                <Banner/>
                 <div className="container items">
                     <div className="d-grid justify-content-center text-center grilla"> 
                         <ItemList items = {dato}/>
                     </div>
                 </div>
+            </>                
             }
         </>
     )

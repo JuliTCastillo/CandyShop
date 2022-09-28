@@ -9,9 +9,8 @@ const Item = ({id,name, imagen, des})=>{
         <>
             <img src={imagen} alt={des} width="150"/>
             <h5 className="mb-0">{name}</h5>
-            <div>
-                <button type="button" className="btn btn-success ms-xl-2" onClick={comprar}>Añadir</button>
-                <Link to={ruta} className="btn btn-success ms-xl-2">Detalle</Link>
+            <div className="m-2">
+                <Link to={ruta} className="btn btn-success ms-xl-2">Añadir</Link>
             </div>
         </>
     )
