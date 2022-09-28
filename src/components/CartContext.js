@@ -41,7 +41,7 @@ const CartContextProvider = ({children}) => {
     }
 
     const totalPrice = () =>{
-        return cartList.reduce((val, itemCart) => val + (itemCart.precio * itemCart.count), 0);
+        return cartList.reduce((val, itemCart) => val + (itemCart.price * itemCart.count), 0);
     }
     return(
         // Usamos nuestro componente y le pasamos los datos

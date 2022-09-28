@@ -32,7 +32,7 @@ const ItemDetail = ({datos}) => {
                         <h3>Descripción</h3>
                         <p>{datos.detail}</p>
                         <br/>
-                        <p>Precio del Producto : ${datos.precio}</p>
+                        <p>Precio del Producto : ${datos.price}</p>
                         <div className="mt-md-5">
                             {
                                 itemCount == 0

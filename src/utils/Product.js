@@ -50,7 +50,7 @@ const product = [
         des : "Fanta 500ml",
         stock : "3",
         category: 3,
-        detail : "Fanta 500ml sabor naranja. Burbujas de sabor dulce siempre dulce, no importa si escogiste naranja, uva, fresa, guaraná o, quizás piña, todos vendrán a burbujas que corren por tu lengua, paladar y garganta, deliciosas para que termines el trago diciendo ahhhh. ​ Porque a veces la vida se torna gris, Fanta con sus sabores estarán ahí para volver el color a mil. ​",
+        detail : "Fanta 500ml sabor naranja. Burbujas de sabor dulce siempre dulce, no importa si escogiste naranja, uva, fresa, guaraná o, quizás piña, todos vendrán a burbujas que corren por tu lengua, paladar y garganta, deliciosas para que termines el trago diciendo ahhhh.​ Porque a veces la vida se torna gris, Fanta con sus sabores estarán ahí para volver el color a mil. ​",
         precio : 215,
         count : 0
     },
