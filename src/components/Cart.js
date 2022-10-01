@@ -1,11 +1,43 @@
 import { useContext } from "react";
 import { CartContext } from "./CartContext";
-
+import { serverTimestamp, setDoc, doc, collection, updateDoc, increment} from "firebase/firestore";
+import {db} from '../utils/FirebaseConfig'; 
 const Cart = () =>{
     //Hacemos una constante - utilizamos un hook - indicamos que contexto queremos usar
     //Ahora mi CartContext es un objeto - le indico que elemento quiero(lista)
     const {cartList, clear, removeItem, totalPrice} = useContext(CartContext); // * Hook 
     
+        const createOrder = async() => {
+            let itemsForDB = cartList.map(item => ({
+                id: item.id,
+                price : item.price,
+                count : item.count,
+                title : item.name
+            }))
+
+            let order = {
+                bayer: {
+                    name: "messi",
+                    mail: "leo@correo.com",
+                    phone: "12341234"
+                },
+                date : serverTimestamp(),
+                items: itemsForDB,
+                total: totalPrice() - (totalPrice() * 0.10)
+            }
+            
+            const  newOrderRef = doc(collection(db, "orders"))
+            await setDoc(newOrderRef, order);
+            cartList.forEach(async(item) => {
+                const itemRef = doc(db, "product", item.id);
+                await updateDoc(itemRef,{
+                    stock: increment(-item.count)
+                })
+            });
+            clear();
+            alert("your order has been created! ID\'s order is " + newOrderRef.id)
+        }
+
     let descuento = 0;
     if(cartList.length == 0) return (
         <div className="text-center m-3">
@@ -59,7 +91,7 @@ const Cart = () =>{
                     
                 </div>
                 <div className="w-100 my-lg-5">
-                    <button className="btn btn-success w-100">Pagar</button>
+                    <button className="btn btn-success w-100" onClick={() => createOrder()}>Pagar</button>
                 </div>
             </div>
         </div>

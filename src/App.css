@@ -29,6 +29,20 @@ header{
   grid-template-columns: 2fr 1fr;
 }
 
+.stock{
+  border: #5c9e4e solid 5px;
+  border-radius: 100%;
+  width: 80px;
+}
+
+.stock p{
+  text-align: center;
+  width: 80px;
+  height: 40px;
+  margin:0;
+  padding: 0;
+}
+
 .price{
   height: 320px;
 }
