@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { CartContext } from "./CartContext";
+import { Link } from "react-router-dom";
 import { serverTimestamp, setDoc, doc, collection, updateDoc, increment} from "firebase/firestore";
 import {db} from '../utils/FirebaseConfig'; 
 const Cart = () =>{
@@ -28,12 +29,14 @@ const Cart = () =>{
             
             const  newOrderRef = doc(collection(db, "orders"))
             await setDoc(newOrderRef, order);
+
             cartList.forEach(async(item) => {
-                const itemRef = doc(db, "product", item.id);
+                const itemRef = doc(db, "Product", item.id);
                 await updateDoc(itemRef,{
                     stock: increment(-item.count)
                 })
             });
+            
             clear();
             alert("your order has been created! ID\'s order is " + newOrderRef.id)
         }
@@ -41,8 +44,9 @@ const Cart = () =>{
     let descuento = 0;
     if(cartList.length == 0) return (
         <div className="text-center m-3">
-            <p>No hay producto :(</p>
-            <img src="https://pbs.twimg.com/media/E4XjFtmWQAM4L4T.jpg" width={300}/>
+            <h2>No hay producto :(</h2>
+            <p>Te invitamos a pasar a nuestra página principal</p>
+            <Link to="/" className="btn btn-outline-secondary">Inicio</Link>
         </div>
     )
     return(

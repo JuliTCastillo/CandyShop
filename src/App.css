@@ -30,15 +30,29 @@ header{
 }
 
 .stock{
-  border: #5c9e4e solid 5px;
-  border-radius: 100%;
-  width: 80px;
+  position: absolute;
+  top: -20px;
+  width: 60px;
+  height: 60px;
 }
 
-.stock p{
+.sinStock{
+  background-color: #d34444;
+  color: white;
+  width: 150px;
+  padding: 5px;
+  margin: 0;
+}
+
+h6{
+  margin: 0;
+}
+
+.stock .stockAbs p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  width: 80px;
-  height: 40px;
   margin:0;
   padding: 0;
 }
