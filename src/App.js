@@ -23,5 +23,7 @@ function App() {
     </CartContextProvider>
   );
 }
-
+/************************************
+ * Autor: Julieta Tatiana Castillo  *
+ ************************************/
 export default App;

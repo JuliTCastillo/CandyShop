@@ -27,4 +27,7 @@ const ItemDetailConteiner = () =>{
     )
 }
 
+/************************************
+ * Autor: Julieta Tatiana Castillo  *
+ ************************************/
 export default ItemDetailConteiner;

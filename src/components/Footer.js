@@ -7,5 +7,7 @@ const Footer = () =>{
         </>
     )
 }
-
+/************************************
+ * Autor: Julieta Tatiana Castillo  *
+ ************************************/
 export default Footer;

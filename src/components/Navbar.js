@@ -1,13 +1,15 @@
 import CartWidget from './CartWidget.js';
 import { Link } from 'react-router-dom';
+import logo from '../imagen/CS.png';
 const Navbar = () => {
     return (
         <>
             <header className="d-flex justify-content-around">
-                <div class="container d-flex justify-content-around">
+                <div class="container d-flex justify-content-between">
                     <nav class="nav_checkbox">
-                        <Link to="/" className='text-light text-decoration-none'>
-                            <h1>Candy-Shop</h1>
+                        <Link to="/" className='text-light text-decoration-none d-flex justify-content-center align-items-center'>
+                            <img className='logo' src={logo} alt="Logo de la pagina" width={90}/>
+                            <h1>CandyShop</h1>
                         </Link>
                         <input type="checkbox" id="tab-nav" class="tab-nav"/>
                         <label for="tab-nav" class="label">
@@ -35,5 +37,7 @@ const Navbar = () => {
         </>
     )
 }
-
+/************************************
+ * Autor: Julieta Tatiana Castillo  *
+ ************************************/
 export default Navbar;

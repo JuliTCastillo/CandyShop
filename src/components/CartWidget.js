@@ -19,5 +19,7 @@ const CartWidget = () =>{
         </>
     )
 }
-
+/************************************
+ * Autor: Julieta Tatiana Castillo  *
+ ************************************/
 export default CartWidget;

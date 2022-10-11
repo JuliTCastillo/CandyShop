@@ -1,6 +1,9 @@
+/************************************
+ * Autor: Julieta Tatiana Castillo  *
+ ************************************/
 import { useState } from "react";
-
 const ItemCount = ({initial, stock, onAdd}) => {
+    const Swal = require('sweetalert2'); //Libreria Swal
     const [cant, setCant] = useState(parseInt(initial)); //estado - hook
     const disminuir = () =>{ 
         if(cant > 0){ //Validamos que el producto no sea menor a 0
@@ -12,7 +15,12 @@ const ItemCount = ({initial, stock, onAdd}) => {
             setCant(cant+1);
         }
         if(cant === parseInt(stock)){ //Si nos pasamos del stock, se lo informamos
-            alert("Lo siento, ese es todo el stock del producto");
+            console.log("Lo siento, ese es todo el stock del producto");
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Lo siento, ese es todo el stock que tenemos',
+            })
         }
     }
 
@@ -29,4 +37,7 @@ const ItemCount = ({initial, stock, onAdd}) => {
         </>
     )
 }
+/************************************
+ * Autor: Julieta Tatiana Castillo  *
+ ************************************/
 export default ItemCount;

@@ -3,11 +3,13 @@ import { CartContext } from "./CartContext";
 import { Link } from "react-router-dom";
 import { serverTimestamp, setDoc, doc, collection, updateDoc, increment} from "firebase/firestore";
 import {db} from '../utils/FirebaseConfig'; 
+
 const Cart = () =>{
     //Hacemos una constante - utilizamos un hook - indicamos que contexto queremos usar
     //Ahora mi CartContext es un objeto - le indico que elemento quiero(lista)
     const {cartList, clear, removeItem, totalPrice} = useContext(CartContext); // * Hook 
-    
+    const Swal = require('sweetalert2'); //Libreria Swal
+
         const createOrder = async() => {
             let itemsForDB = cartList.map(item => ({
                 id: item.id,
@@ -38,7 +40,12 @@ const Cart = () =>{
             });
             
             clear();
-            alert("your order has been created! ID\'s order is " + newOrderRef.id)
+            console.log("your order has been created! ID\'s order is " + newOrderRef.id)
+            Swal.fire({
+                icon: 'success',
+                title: "your order has been created! ID\'s order is " + newOrderRef.id,
+                showConfirmButton: true,
+            })
         }
 
     let descuento = 0;
@@ -104,3 +111,7 @@ const Cart = () =>{
 }
 
 export default Cart;
+
+/************************************
+ * Autor: Julieta Tatiana Castillo  *
+ ************************************/

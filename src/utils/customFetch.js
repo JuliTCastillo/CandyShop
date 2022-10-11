@@ -1,5 +1,7 @@
+/************************************
+ * Autor: Julieta Tatiana Castillo  *
+ ************************************/
 let is_ok = true;
-
 let customFetch = (time, array) =>{
     return new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -12,5 +14,7 @@ let customFetch = (time, array) =>{
         }, 2000)
     })
 }
-
+/************************************
+ * Autor: Julieta Tatiana Castillo  *
+ ************************************/
 export default customFetch;

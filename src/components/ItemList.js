@@ -19,5 +19,7 @@ const ItemList = ({items}) => {
         </>
     )
 }
-
+/************************************
+ * Autor: Julieta Tatiana Castillo  *
+ ************************************/
 export default ItemList;

@@ -1,3 +1,6 @@
+/************************************
+ * Autor: Julieta Tatiana Castillo  *
+ ************************************/
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app"; //nos conectamos en firebase
 import { getFirestore } from "firebase/firestore"; //nos conectamos con firestore
@@ -16,3 +19,6 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app); //Lo exportamos porque las consulta no las vamos hacer acá
+/************************************
+ * Autor: Julieta Tatiana Castillo  *
+ ************************************/

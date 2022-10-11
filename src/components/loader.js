@@ -8,5 +8,7 @@ const Loader = () =>{
         </div>
     )
 }
-
+/************************************
+ * Autor: Julieta Tatiana Castillo  *
+ ************************************/
 export default Loader;

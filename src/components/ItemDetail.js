@@ -7,7 +7,7 @@ import {CartContext} from "./CartContext.js";
 const ItemDetail = ({datos}) => {
     const [itemCount, setItemCount] = useState(0);
     //le pedimos que nos traiga la función ¿
-    const { addItem } = useContext(CartContext);
+    const {addItem} = useContext(CartContext);
 
     const onAdd = (qty) =>{ //Crear el componente contador
         setItemCount(qty);
@@ -46,5 +46,9 @@ const ItemDetail = ({datos}) => {
         </>
     )
 }
+
+/************************************
+ * Autor: Julieta Tatiana Castillo  *
+ ************************************/
 
 export default ItemDetail;

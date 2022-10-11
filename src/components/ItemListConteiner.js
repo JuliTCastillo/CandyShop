@@ -59,5 +59,7 @@ const ItemListConteiner = () => {
         </>
     )
 }
-
+/************************************
+ * Autor: Julieta Tatiana Castillo  *
+ ************************************/
 export default ItemListConteiner;

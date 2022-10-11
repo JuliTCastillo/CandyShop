@@ -46,11 +46,13 @@ const CartContextProvider = ({children}) => {
     return(
         // Usamos nuestro componente y le pasamos los datos
         //Un componente no puede renderizar dos elemento, por eso usamos un fragment
-        <CartContext.Provider value = {{cartList, addItem, clear, removeItem, totalProduct, totalPrice}}>
+        <CartContext.Provider value = {{cartList, addItem, clear, removeItem, totalProduct, totalPrice, isInCart}}>
             {children}
         </CartContext.Provider>
     )
 }
-
+/************************************
+ * Autor: Julieta Tatiana Castillo  *
+ ************************************/
 export default CartContextProvider;
 
