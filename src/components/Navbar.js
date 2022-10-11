@@ -5,19 +5,19 @@ const Navbar = () => {
     return (
         <>
             <header className="d-flex justify-content-around">
-                <div class="container d-flex justify-content-between">
-                    <nav class="nav_checkbox">
+                <div className="container d-flex justify-content-between">
+                    <nav className="nav_checkbox">
                         <Link to="/" className='text-light text-decoration-none d-flex justify-content-center align-items-center'>
                             <img className='logo' src={logo} alt="Logo de la pagina" width={90}/>
                             <h1>CandyShop</h1>
                         </Link>
-                        <input type="checkbox" id="tab-nav" class="tab-nav"/>
-                        <label for="tab-nav" class="label">
-                            <div class="burger"></div>
-                            <div class="burger"></div>
-                            <div class="burger"></div>
+                        <input type="checkbox" id="tab-nav" className="tab-nav"/>
+                        <label htmlFor="tab-nav" className="label">
+                            <div className="burger"></div>
+                            <div className="burger"></div>
+                            <div className="burger"></div>
                         </label>
-                        <ul class="content_nav">
+                        <ul className="content_nav">
                             <li className="nav-item ms-xl-2">
                                 <Link className='text-light text-decoration-none' to="/category/2">Helados</Link>
                             </li>

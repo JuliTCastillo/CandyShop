@@ -6,6 +6,7 @@ import Cart from './components/Cart.js';
 import CartContextProvider  from './components/CartContext.js';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Footer from './components/Footer'
+
 function App() {
   return (
     //Contenedor de navegación

@@ -1,5 +1,5 @@
 import ItemList from './ItemList.js';
-import { cloneElement, useEffect, useState } from 'react';
+import {useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Loader from './loader.js';
 import Banner from './Banner';

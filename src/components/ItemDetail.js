@@ -35,7 +35,7 @@ const ItemDetail = ({datos}) => {
                         <p>Precio del Producto : ${datos.price}</p>
                         <div className="mt-md-5">
                             {
-                                itemCount == 0
+                                itemCount === 0
                                 ? <ItemCount initial="0" stock = {datos.stock} onAdd={onAdd}/>
                                 : <Link to="/cart"><button className="btn btn-danger">Checkout</button></Link>
                             }

@@ -8,7 +8,7 @@ const ItemList = ({items}) => {
             {
             items.length > 0 
             ? items.map(item => (
-                <div>
+                <div key={item.id}>
                     <div className="bg-white rounded shadow-sm py-5 px-4 m-2">
                         <Item id={item.id} name={item.name} imagen = {item.img} des={item.description} stock = {item.stock}/>
                     </div>

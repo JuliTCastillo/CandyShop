@@ -1,4 +1,4 @@
-import { cloneElement, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import {db} from "../utils/FirebaseConfig"
 import { doc, getDoc } from "firebase/firestore";
 import ItemDetail from "./ItemDetail.js";

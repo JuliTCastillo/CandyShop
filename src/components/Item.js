@@ -21,11 +21,11 @@ const Item = ({id,name, imagen, des, stock})=>{
                 {
                     stock === 0
                     ?   <div className="d-flex justify-content-center align-items-center borde"> 
-                            <button class="btn-sinStock">
-                                <span class="btn-gradient d-flex justify-content-center align-items-center borde">
-                                    <i class='bx bxs-x-circle'/>
+                            <button className="btn-sinStock">
+                                <span className="btn-gradient d-flex justify-content-center align-items-center borde">
+                                    <i className='bx bxs-x-circle'/>
                                 </span>
-                                <span class="btn-text-stock">No hay stock</span>
+                                <span className="btn-text-stock">No hay stock</span>
                             </button>
                         </div>
                     : 
@@ -36,11 +36,11 @@ const Item = ({id,name, imagen, des, stock})=>{
                             <Link to="/cart" className="text-light text-decoration-none">👉Ver carrito👈</Link>
                         </div>
                     : <Link to={ruta} className="ms-xl-2 text-decoration-none d-flex justify-content-center align-items-center">
-                        <button class="btn-pink">
-                            <span class="btn-gradient">
-                                <i class='bx bx-cart-add'/>
+                        <button className="btn-pink">
+                            <span className="btn-gradient">
+                                <i className='bx bx-cart-add'/>
                             </span>
-                            <span class="btn-text">Comprar</span>
+                            <span className="btn-text">Comprar</span>
                         </button>
                     </Link>
                 }
