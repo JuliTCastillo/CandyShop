@@ -11,17 +11,18 @@ const ItemDetailConteiner = () =>{
     const [loading, setLoading] = useState(false);
 
     useEffect(() =>{
-            setLoading(true)
+            setLoading(true);
             const docRef = doc(db, "Product", id);
             getDoc(docRef)
                 .then(result => setDato({id: result.id, ...result.data()}))
                 .catch(err => console.log(err))
                 .finally(() => setLoading(false))
-    }, [])
+    }, [id])
 
     return(
         // <ItemDetail datos={dato}/>
         <div>
+            {console.log(dato)}
             {loading ? <Loader/> : <ItemDetail datos={dato}/>}
         </div>
     )

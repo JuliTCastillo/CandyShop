@@ -40,16 +40,16 @@ const Cart = () =>{
             });
             
             clear();
-            console.log("your order has been created! ID\'s order is " + newOrderRef.id)
+            console.log(`your order has been created! ID's order is ${newOrderRef.id}`)
             Swal.fire({
                 icon: 'success',
-                title: "your order has been created! ID\'s order is " + newOrderRef.id,
+                title: `your order has been created! ID's order is ${newOrderRef.id}`,
                 showConfirmButton: true,
             })
         }
 
     let descuento = 0;
-    if(cartList.length == 0) return (
+    if(cartList.length === 0) return (
         <div className="text-center m-3">
             <h2>No hay producto :(</h2>
             <p>Te invitamos a pasar a nuestra página principal</p>

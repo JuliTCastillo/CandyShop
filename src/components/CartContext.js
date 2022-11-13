@@ -1,5 +1,4 @@
 import {createContext, useState } from "react";
-import Item from "./Item";
 
 //Lo exportamos para que cualquier componente lo puede usar
 export const CartContext = createContext();
